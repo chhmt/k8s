@@ -1,10 +1,10 @@
-На всех ПК
+### На всех ПК ###
 
-Устанавливаем Docker
+### Устанавливаем Docker ###
 
 https://docs.docker.com/engine/install/
 
-Устанавливаем K8s
+### Устанавливаем K8s ###
 
 sudo vim /etc/docker/daemon.json
 
@@ -43,8 +43,7 @@ sudo apt-mark hold kubeadm kubelet kubectl
 
 kubeadm version
 
-
-На Мастер ноде
+### На Мастер ноде ###
 
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors all
 
@@ -58,6 +57,6 @@ kubectl get pods --all-namespaces
 
 kubectl get nodes
 
-На ноде
+### На ноде ###
 
 sudo kubeadm join 172.16.100.31:6443 --token 7o107a.82jdw0hq0ppicpmp --discovery-token-ca-cert-hash sha256:9ffb8ae71d0837d2d015ca4d355dcf724a663b8fc7575a80288e7f26dd587450
